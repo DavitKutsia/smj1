@@ -1,0 +1,560 @@
+* {
+  /* Global reset for padding, margin, box-sizing, and font styling */
+  transition: 0.3s ease;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "kumbh-sans-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+}
+
+body {
+  /* Full height and width for body with horizontal padding */
+  width: 100%;
+  height: 100vh;
+  padding-inline: 300px;
+}
+
+img {
+  /* Image styling for cursor and border radius */
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+.imgDiv {
+  /* Flexbox container for images with a gap between them */
+  display: flex;
+  gap: 31px;
+  margin-top: 20px;
+}
+
+.productDiv {
+  /* Main container for the product with spacing and vertical alignment */
+  width: 100%;
+  height: calc(100vh - 11vh);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 250px;
+}
+
+.modal {
+  /* Modal styling for center alignment and positioning */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+}
+
+.modal2 {
+  /* Semi-transparent background for the modal overlay */
+  background-color: rgba(28, 27, 27, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.changeImg {
+  /* Transparent, rounded change image button */
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+}
+
+.changeImg:hover {
+  /* Hover effect for change image button (scaling) */
+  transform: scale(1.05);
+}
+
+.mainChange {
+  /* Flexbox container for change image buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.goBack {
+  /* Rounded back button with specific positioning */
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  margin-left: 830px;
+  margin-top: 100px;
+}
+
+header {
+  /* Header container with flex layout and padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 11vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  box-sizing: border-box;
+}
+
+.sneakers {
+  /* Positioning and styling for the "Sneakers" title */
+  Top: 43px;
+  Left: 165px;
+  color: #1D2026;
+  font-size: 45px;
+  font-variation-settings: "wght" 700;
+}
+
+.headerDiv {
+  /* Flex container for header items with spacing */
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.headerHeaderDiv {
+  /* Flex container for header navigation with cursor pointer */
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  cursor: pointer;
+}
+
+.headerSpan {
+  /* Header span styling with color and transition */
+  color: #69707D;
+  font-size: 19px;
+  height: 11vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.01s;
+}
+
+.headerSpan:hover {
+  /* Hover effect for header span (underline and color change) */
+  border-bottom: 2px solid orange;
+  font-size: 19.005px;
+  color: #1D2026;
+}
+
+.cart {
+  /* Cart button with fixed width and cursor pointer */
+  width: 44.82px;
+  height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  animation: none;
+  border-radius: 0;
+}
+
+.headerHeaderHeaderDiv {
+  /* Flex container for secondary header elements */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  height: 11vh;
+  gap: 50px;
+}
+
+.photo {
+  /* Photo image transition styling */
+  transition: 0.01s;
+}
+
+.photo:hover {
+  /* Hover effect for photo image (rounded border) */
+  border-radius: 50%;
+  border: 1px solid orange;
+}
+
+.sc {
+  /* Styling for "sc" label with orange color */
+  color: orange;
+  font-size: 18px;
+}
+
+.name {
+  /* Product name styling with specific font size and weight */
+  font-size: 54px;
+  font-variation-settings: "wght" 500;
+  width: 545px;
+  height: 120px;
+}
+
+.desc {
+  /* Product description styling with font color and size */
+  color: #69707D;
+  font-size: 20px;
+  width: 545px;
+  height: 100px;
+}
+
+.discount {
+  /* Flex container for discount information */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.half-price {
+  /* Styling for half-price label with bold text */
+  color: #1D2026;
+  font-size: 30px;
+  font-variation-settings: "wght" 700;
+  width: 126px;
+  height: 40px;
+}
+
+.procent {
+  /* Styling for the discount percentage label with background */
+  color: #FF7E1B;
+  font-size: 18px;
+  font-variation-settings: "wght" 700;
+  background-color: #FFEEE2;
+  width: 51px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.textDiv {
+  /* Main container for product details and text */
+  width: 100%;
+  height: calc(100vh - 11vh);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 100px;
+}
+
+.orPrice {
+  /* Styling for original price with a strikethrough */
+  font-variation-settings: "wght" 700;
+  font-size: 18px;
+  color: #B6BCC8;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.buy {
+  /* Flexbox container for the "Buy" section */
+  width: 500px;
+  height: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.plusMinus {
+  /* Flex container for quantity selector with background color */
+  width: 156px;
+  height: 56px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F6F8FD;
+  padding-inline: 15px;
+}
+
+.addOrNo {
+  /* Add or no button styling with font size and color */
+  border: none;
+  font-size: 34px;
+  color: #FF7E1B;
+  background-color: transparent;
+  font-variation-settings: "wght" 550;
+  cursor: pointer;
+}
+
+.num {
+  /* Styling for number display with bold font */
+  font-size: 18px;
+  font-variation-settings: "wght" 700;
+}
+
+.addtoCart {
+  /* Styling for the add-to-cart button */
+  border: none;
+  border-radius: 10px;
+  width: 272px;
+  height: 56px;
+}
+
+/* Button styles for adding to cart */
+.addtoCart {
+  background-color: #FF7E1B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect for add to cart button */
+.addtoCart:hover {
+  scale: 1.05;
+  background-color: #f07618;
+}
+
+/* Cart dropdown container */
+.cartDropdown {
+  position: absolute;
+  left: 80.5%;
+  top: 8vh;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 256px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "kumbh-sans-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Cart empty message style */
+.cartDropdown p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Cart heading style */
+.cartH1 {
+  font-size: 18px;
+  font-variation-settings: "wght" 550;
+}
+
+/* Cart item container */
+.cartDiv {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 10px 20px;
+  width: 360px;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Shoe name style in cart */
+.shoeName {
+  font-size: 16px;
+}
+
+/* Price text style in cart */
+.price1 {
+  font-size: 16px;
+}
+
+.price2 {
+  font-size: 16px;
+  color: #1D2026;
+  font-variation-settings: "wght" 600;
+}
+
+/* Checkout button style */
+.checkout {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FF7E1B;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-variation-settings: "wght" 550;
+}
+
+/* Hover effect for checkout button */
+.checkout:hover {
+  scale: 1.05;
+  background-color: #e16f18;
+}
+
+/* Cart item layout style */
+.asset {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Delete button style in cart */
+.delete {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  /* Body padding for mobile */
+  body {
+    padding-inline: 20px;
+  }
+
+  /* Product div style for mobile */
+  .productDiv {
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  /* Image div spacing for mobile */
+  .imgDiv {
+    gap: 20px;
+  }
+
+  /* Text div alignment for mobile */
+  .textDiv {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Product name font size for mobile */
+  .name {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Product description font size for mobile */
+  .desc {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Discount section styling for mobile */
+  .discount {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .half-price {
+    font-size: 24px;
+  }
+
+  .procent {
+    font-size: 16px;
+    width: auto;
+  }
+
+  /* Buy section layout for mobile */
+  .buy {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Plus and minus button container for mobile */
+  .plusMinus {
+    width: 100px;
+  }
+
+  /* Add to cart button width for mobile */
+  .addtoCart {
+    width: 200px;
+  }
+
+  /* Cart dropdown width for mobile */
+  .cartDropdown {
+    width: 80%;
+    top: 7vh;
+  }
+
+  /* Cart dropdown content padding for mobile */
+  .cartDropdown .cartDiv {
+    padding: 10px;
+  }
+
+  /* Close button for modal */
+  .goBack {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Main change container for image modal */
+  .modal .mainChange {
+    gap: 10px;
+  }
+
+  /* Modal overlay padding for mobile */
+  .modal2 {
+    padding: 20px;
+  }
+
+  /* Header section alignment for mobile */
+  .headerDiv {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Header items spacing for mobile */
+  .headerHeaderDiv {
+    display: flex;
+    gap: 40px;
+  }
+
+  /* Header button spacing for mobile */
+  .headerHeaderHeaderDiv {
+    gap: 10px;
+  }
+
+  /* Logo font size for mobile */
+  .sneakers {
+    font-size: 30px;
+  }
+
+  /* Header link font size for mobile */
+  .headerSpan {
+    font-size: 16px;
+  }
+
+  /* Profile picture size for mobile */
+  .photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Header link hover effect for mobile */
+  .headerHeaderDiv span:hover {
+    font-size: 17px;
+  }
+}
